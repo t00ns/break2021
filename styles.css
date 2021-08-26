@@ -1,0 +1,180 @@
+/* fonts in use */
+/* @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap"); */
+@font-face {
+  font-family: "Sporting Grotesque Regular";
+  font-weight: 400;
+  src: url("fonts/Sporting_Grotesque-Regular_web.woff2"),
+    url("fonts/Sporting_Grotesque-Regular_web.woff");
+}
+
+/* rest of code */
+/* note: everything is in a div b/c objects can be clicked & dragged. */
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(63, 26, 167, 0.15) 50%,
+    #b0f8c6 100%
+  );
+  background-color: #f6eef6;
+  font-family: "Sporting Grotesque Regular";
+  font-weight: 400;
+  color: #3f1aa7;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.polaroid {
+  position: fixed;
+  top: 5%;
+  left: 3%;
+}
+
+/* movable img */
+.polaroid img {
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: #3f1aa7;
+}
+
+a:hover {
+  color: #f96602;
+  transition: 0.1s;
+}
+
+/* projects section */
+
+.projects {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.projects ul {
+  list-style-type: none;
+  font-size: 91px;
+}
+
+.projects li {
+  padding: 10px 0;
+}
+
+.icon {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  bottom: 2%;
+  right: 5%;
+  width: 80px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* movable icons */
+.icon img {
+  width: 85px;
+}
+
+#contact {
+  position: fixed;
+  right: 5%;
+  bottom: 50%;
+}
+
+#github {
+  position: fixed;
+  right: 5%;
+  bottom: 25%;
+}
+
+#resume {
+  position: fixed;
+  right: 5%;
+  bottom: 3%;
+}
+
+/* about section */
+.about {
+  display: block;
+  max-width: 915px;
+  margin: 0 auto;
+  padding: 200px 0 25px 0;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+footer {
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* media queries */
+
+@media (max-width: 836px) {
+  .polaroid img {
+    width: 175px;
+  }
+
+  .projects ul {
+    font-size: 48px;
+  }
+
+  .icon img {
+    width: 75px;
+    padding: 0 0 2px 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .about {
+    padding: 25px 20px 10px 20px;
+  }
+}
+
+@media (max-width: 415px) {
+  .polaroid {
+    top: 3%;
+    left: 35%;
+    display: block;
+  }
+
+  .polaroid img {
+    width: 150px;
+  }
+
+  .projects {
+    margin-top: 300px;
+  }
+
+  .projects ul {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
