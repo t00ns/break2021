@@ -25,9 +25,32 @@ addEventListener("mousemove", (e) => {
   }
 });
 
+// polaroid click and drag //
+
+polaroid.addEventListener("mousedown", (e) => {
+  e.target.classList.add("moving");
+});
+
+polaroid.addEventListener("mouseup", (e) => {
+  e.target.classList.remove("moving");
+});
+
+addEventListener("mouseup", (e) => {
+  if (box.classList.contains("moving")) {
+    polaroid.style.left = e.clientX + "px";
+    polaroid.style.top = e.clientY + "px";
+  }
+  polaroid.classList.remove("moving");
+});
+
+addEventListener("mousemove", (e) => {
+  if (polaroid.classList.contains("moving")) {
+    polaroid.style.left = e.clientX + "px";
+    polaroid.style.top = e.clientY + "px";
+  }
+});
 
 // above code that is based on //
-
 box.addEventListener("mousedown", (e) => {
   e.target.classList.add("moving");
 });
