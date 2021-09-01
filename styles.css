@@ -21,10 +21,12 @@ body {
   color: #3f1aa7;
   font-size: 16px;
   line-height: 1.5;
+
+  cursor: crosshair;
 }
 
 .polaroid {
-  position: fixed;
+  position: absolute;
   top: 5%;
   left: 3%;
 }
@@ -32,6 +34,7 @@ body {
 /* movable img */
 .polaroid img {
   width: 200px;
+  transform: rotate(-5deg);
 }
 
 a {
@@ -41,7 +44,21 @@ a {
 
 a:hover {
   color: #f96602;
-  transition: 0.1s;
+  transition: 0.2s;
+  cursor: crosshair;
+}
+
+img:hover {
+  cursor: grab;
+}
+
+.polaroid img:hover {
+  color: #f96602;
+  box-shadow: 0px 0px 30px 0px #f96602;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 /* projects section */
@@ -77,19 +94,19 @@ a:hover {
 }
 
 #contact {
-  position: fixed;
+  position: absolute;
   right: 5%;
   bottom: 50%;
 }
 
 #github {
-  position: fixed;
+  position: absolute;
   right: 5%;
   bottom: 25%;
 }
 
 #resume {
-  position: fixed;
+  position: absolute;
   right: 5%;
   bottom: 3%;
 }
@@ -147,9 +164,7 @@ footer {
 
 @media (max-width: 415px) {
   .polaroid {
-    top: 3%;
-    left: 35%;
-    display: block;
+    display: none;
   }
 
   .polaroid img {
@@ -157,7 +172,8 @@ footer {
   }
 
   .projects {
-    margin-top: 300px;
+    margin-top: 25px;
+    text-align: left;
   }
 
   .projects ul {
