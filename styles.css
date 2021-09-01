@@ -25,13 +25,14 @@ body {
   cursor: crosshair;
 }
 
+/* movable img */
 .polaroid {
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 3%;
+  z-index: 3;
 }
 
-/* movable img */
 .polaroid img {
   width: 200px;
   transform: rotate(-5deg);
@@ -94,21 +95,24 @@ img:hover {
 }
 
 #contact {
-  position: absolute;
+  position: fixed;
   right: 5%;
   bottom: 50%;
+  z-index: 3;
 }
 
 #github {
-  position: absolute;
+  position: fixed;
   right: 5%;
   bottom: 25%;
+  z-index: 3;
 }
 
 #resume {
-  position: absolute;
+  position: fixed;
   right: 5%;
   bottom: 3%;
+  z-index: 3;
 }
 
 /* about section */
