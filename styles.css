@@ -1,201 +1,205 @@
 /* fonts in use */
 /* @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap"); */
 @font-face {
-  font-family: "Sporting Grotesque Regular";
-  font-weight: 400;
-  src: url("fonts/Sporting_Grotesque-Regular_web.woff2"),
-    url("fonts/Sporting_Grotesque-Regular_web.woff");
+	font-family: "Sporting Grotesque Regular";
+	font-weight: 400;
+	src: url("fonts/Sporting_Grotesque-Regular_web.woff2"),
+		url("fonts/Sporting_Grotesque-Regular_web.woff");
 }
 
 /* rest of code */
-/* note: everything is in a div b/c objects can be clicked & dragged. */
+/* note: everything is in a div b/c objects could be clicked & dragged. */
 body {
-  background: linear-gradient(
-    180deg,
-    rgba(63, 26, 167, 0.15) 50%,
-    #b0f8c6 100%
-  );
-  background-color: #f6eef6;
-  font-family: "Sporting Grotesque Regular";
-  font-weight: 400;
-  color: #3f1aa7;
-  font-size: 16px;
-  line-height: 1.5;
+	background: linear-gradient(180deg, rgba(63, 26, 167, 0.15) 25%, #b0f8c6 75%);
+	background-color: #f6eef6;
+	font-family: "Sporting Grotesque Regular";
+	font-weight: 400;
+	color: #3f1aa7;
+	font-size: 16px;
+	line-height: 1.5;
 
-  cursor: crosshair;
+	cursor: crosshair;
 }
 
-/* movable img */
 .polaroid {
-  position: fixed;
-  top: 5%;
-  left: 3%;
-  z-index: 3;
+	position: fixed;
+	top: 5%;
+	left: 3%;
+	z-index: 2;
 }
 
 .polaroid img {
-  width: 200px;
-  transform: rotate(-5deg);
+	width: 200px;
+	transition: all 0.2s ease-in;
 }
 
 a {
-  text-decoration: none;
-  color: #3f1aa7;
+	text-decoration: none;
+	color: #3f1aa7;
 }
 
 a:hover {
-  color: #f96602;
-  transition: 0.2s;
-  cursor: crosshair;
-}
-
-img:hover {
-  cursor: grab;
+	color: #f96602;
+	transition: 0.2s;
+	cursor: crosshair;
 }
 
 .polaroid img:hover {
-  color: #f96602;
-  box-shadow: 0px 0px 30px 0px #f96602;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+	color: #f96602;
+	box-shadow: 0px 0px 30px 0px #f96602;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.15s ease-in;
+	transform: rotate(-5deg);
 }
 
 /* projects section */
 
 .projects {
-  text-align: center;
-  padding-top: 16px;
+	text-align: center;
+	padding-top: 5%;
+	z-index: 3;
 }
 
-.projects ul {
-  list-style-type: none;
-  font-size: 91px;
+.projects a {
+	padding: 10px 0;
+	font-size: 96px;
+	display: block;
 }
 
-.projects li {
-  padding: 10px 0;
+.projects img {
+	opacity: 0;
+	max-width: 650px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	transition: opacity 0.2s;
+}
+
+a:hover img {
+	opacity: 1;
 }
 
 .icon {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  bottom: 2%;
-  right: 5%;
-  width: 80px;
-  text-align: center;
-  justify-content: center;
+	display: block;
+	padding: 10px;
+	text-align: center;
+	bottom: 2%;
+	right: 5%;
+	width: 80px;
+	text-align: center;
+	justify-content: center;
 }
 
 /* movable icons */
 .icon img {
-  width: 85px;
+	width: 85px;
 }
 
 #contact {
-  position: fixed;
-  right: 5%;
-  bottom: 50%;
-  z-index: 3;
+	position: fixed;
+	right: 5%;
+	bottom: 45%;
+	z-index: 2;
 }
 
 #github {
-  position: fixed;
-  right: 5%;
-  bottom: 25%;
-  z-index: 3;
+	position: fixed;
+	right: 5%;
+	bottom: 25%;
+	z-index: 2;
 }
 
 #resume {
-  position: fixed;
-  right: 5%;
-  bottom: 3%;
-  z-index: 3;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	z-index: 2;
 }
 
 /* about section */
 .about {
-  display: block;
-  max-width: 915px;
-  margin: 0 auto;
-  padding: 200px 0 25px 0;
+	text-align: none;
+	display: block;
+	max-width: 915px;
+	margin: 0 auto;
+	padding: 200px 0 25px 0;
 }
 
 h1 {
-  font-size: 80px;
-  font-weight: 400;
-  line-height: 1.25;
+	font-size: 80px;
+	font-weight: 400;
+	line-height: 1.25;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.75;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.75;
 }
 
 footer {
-  padding: 10px 25px;
-  text-align: center;
-  font-size: 14px;
+	padding: 10px 25px;
+	text-align: center;
+	font-size: 14px;
 }
-
 
 /* media queries */
 
 @media (max-width: 836px) {
-  .polaroid img {
-    width: 175px;
-  }
+	.polaroid img {
+		width: 175px;
+	}
 
-  .projects ul {
-    font-size: 48px;
-  }
+	.projects ul {
+		font-size: 48px;
+	}
 
-  .icon img {
-    width: 75px;
-    padding: 0 0 2px 0;
-  }
+	.icon img {
+		width: 75px;
+		padding: 0 0 2px 0;
+	}
 
-  h1 {
-    font-size: 48px;
-  }
+	h1 {
+		font-size: 48px;
+	}
 
-  .about {
-    padding: 25px 20px 10px 20px;
-  }
+	.about {
+		padding: 25px 20px 10px 20px;
+	}
 }
 
-@media (max-width: 415px) {
-  .polaroid {
-    display: none;
-  }
+@media (max-width: 575px) {
+	.polaroid {
+		display: none;
+	}
 
-  .polaroid img {
-    width: 150px;
-  }
+	.polaroid img {
+		width: 150px;
+	}
 
-  .projects {
-    margin-top: 25px;
-    text-align: left;
-  }
+	.projects {
+		margin-top: 25px;
+		text-align: left;
+	}
 
-  .projects ul {
-    font-size: 32px;
-    line-height: 1.2;
-  }
+	.projects ul {
+		font-size: 32px;
+		line-height: 1.2;
+	}
 
-  .icon {
-    display: none;
-  }
+	.icon {
+		display: none;
+	}
 
-  h1 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
+	h1 {
+		font-size: 32px;
+		line-height: 1.2;
+	}
 
-  h3 {
-    font-size: 16px;
-  }
+	h3 {
+		font-size: 16px;
+	}
 }
