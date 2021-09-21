@@ -150,6 +150,14 @@ footer {
 	font-size: 14px;
 }
 
+footer sub {
+	font-size: 7px;
+	display: block;
+	padding: 5px 0;
+}
+
+
+
 /* media queries */
 
 @media (max-width: 836px) {
