@@ -56,24 +56,25 @@ a:hover {
 /* projects section */
 
 .projects {
-	text-align: center;
 	padding-top: 5%;
+	display: block;
+	text-align: center;
 }
 
 .projects a {
+	display: block;
 	padding: 10px 0;
 	font-size: 96px;
-	display: block;
 }
 
-.projects img {
+.projects a img {
 	opacity: 0;
 	max-width: 650px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 1;
+	z-index: -1;
 	transition: opacity 0.2s;
 }
 
