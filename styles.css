@@ -65,6 +65,7 @@ a:hover {
 	display: block;
 	padding: 10px 0;
 	font-size: 96px;
+	z-index: 3;
 }
 
 .projects a img {
