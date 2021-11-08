@@ -165,7 +165,7 @@ sub {
 		width: 175px;
 	}
 
-	.projects ul {
+	.projects a {
 		font-size: 48px;
 	}
 
@@ -197,7 +197,7 @@ sub {
 		text-align: left;
 	}
 
-	.projects ul {
+	.projects a {
 		font-size: 32px;
 		line-height: 1.2;
 	}
